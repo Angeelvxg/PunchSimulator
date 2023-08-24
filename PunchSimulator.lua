@@ -59,12 +59,12 @@ local MainTab = Window:MakeTab({
 })
 
 local EggTab = Window:MakeTab({
-  Name = "Egg",
+  Name = "Eggs",
   Icon = "rbxassetid://4483345998" 
 })
 
 local GeneralTab = Window:MakeTab({
-  Name = "Teleport",
+  Name = "Misc",
   Icon = "rbxassetid://4483345998"
 })
 
@@ -118,8 +118,8 @@ MainTab:AddButton({
     end    
 })
 
--- Egg 
-EggTab:AddToggle({
+-- Eggs 
+EggsTab:AddToggle({
   Name = "Auto Break Forest Egg",
   Default = false,
   Callback = function(Value)
@@ -133,7 +133,7 @@ EggTab:AddToggle({
   end
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Auto Break Snow Egg",
   Default = false,
   Callback = function(Value)
@@ -147,7 +147,7 @@ EggTab:AddToggle({
   end
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Auto Break Toy Egg",
   Default = false,
   Callback = function(Value)
@@ -161,7 +161,7 @@ EggTab:AddToggle({
   end
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Auto Break Farm Egg",
   Default = false,
   Callback = function(Value)
@@ -175,7 +175,7 @@ EggTab:AddToggle({
   end
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Auto Break Samurai Egg",
   Default = false,
   Callback = function(Value)
@@ -189,7 +189,7 @@ EggTab:AddToggle({
   end
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Auto Break Space Egg",
   Default = false,
   Callback = function(Value)
@@ -203,7 +203,7 @@ EggTab:AddToggle({
   end
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Hide Animation",
   Default = false,
   Callback = function(Value)
@@ -216,7 +216,7 @@ EggTab:AddToggle({
   end  
 })
 
-EggTab:AddToggle({
+EggsTab:AddToggle({
   Name = "Claim UGC",
   Default = false,
   Callback = function(Value)
@@ -227,8 +227,8 @@ EggTab:AddToggle({
   end  
 })
 
--- General
-GeneralTab:AddDropdown({
+-- Misc
+MiscTab:AddDropdown({
   Name = "Teleports",
   Options = parts,
   Callback = function(value)
@@ -239,7 +239,7 @@ GeneralTab:AddDropdown({
   end
 })
 
-local freq = GeneralTab:AddTextbox({
+local freq = MiscTab:AddTextbox({
 	Name = "Autoclick Interval",
 	Default = "0.01", 
 	TextDisappear = false, 
@@ -249,7 +249,7 @@ local freq = GeneralTab:AddTextbox({
 })
 
 
-GeneralTab:AddToggle({
+MiscTab:AddToggle({
     Name = "Auto Click",
     Default = false,
     Callback = function(Value)
