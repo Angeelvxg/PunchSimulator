@@ -59,12 +59,12 @@ local MainTab = Window:MakeTab({
 })
 
 local EggTab = Window:MakeTab({
-  Name = "Eggs",
+  Name = "Egg",
   Icon = "rbxassetid://4483345998" 
 })
 
 local GeneralTab = Window:MakeTab({
-  Name = "Misc",
+  Name = "Teleport",
   Icon = "rbxassetid://4483345998"
 })
 
@@ -189,6 +189,7 @@ EggTab:AddToggle({
   end
 })
 
+
 EggTab:AddToggle({
   Name = "Auto Break Space Egg",
   Default = false,
@@ -227,7 +228,7 @@ EggTab:AddToggle({
   end  
 })
 
--- Misc
+-- General
 GeneralTab:AddDropdown({
   Name = "Teleports",
   Options = parts,
