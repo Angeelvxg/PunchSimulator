@@ -118,8 +118,8 @@ MainTab:AddButton({
     end    
 })
 
--- Eggs 
-EggsTab:AddToggle({
+-- Egg 
+EggTab:AddToggle({
   Name = "Auto Break Forest Egg",
   Default = false,
   Callback = function(Value)
@@ -133,7 +133,7 @@ EggsTab:AddToggle({
   end
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Auto Break Snow Egg",
   Default = false,
   Callback = function(Value)
@@ -147,7 +147,7 @@ EggsTab:AddToggle({
   end
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Auto Break Toy Egg",
   Default = false,
   Callback = function(Value)
@@ -161,7 +161,7 @@ EggsTab:AddToggle({
   end
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Auto Break Farm Egg",
   Default = false,
   Callback = function(Value)
@@ -175,7 +175,7 @@ EggsTab:AddToggle({
   end
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Auto Break Samurai Egg",
   Default = false,
   Callback = function(Value)
@@ -189,7 +189,7 @@ EggsTab:AddToggle({
   end
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Auto Break Space Egg",
   Default = false,
   Callback = function(Value)
@@ -203,7 +203,7 @@ EggsTab:AddToggle({
   end
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Hide Animation",
   Default = false,
   Callback = function(Value)
@@ -216,7 +216,7 @@ EggsTab:AddToggle({
   end  
 })
 
-EggsTab:AddToggle({
+EggTab:AddToggle({
   Name = "Claim UGC",
   Default = false,
   Callback = function(Value)
@@ -228,7 +228,7 @@ EggsTab:AddToggle({
 })
 
 -- Misc
-MiscTab:AddDropdown({
+GeneralTab:AddDropdown({
   Name = "Teleports",
   Options = parts,
   Callback = function(value)
@@ -239,7 +239,7 @@ MiscTab:AddDropdown({
   end
 })
 
-local freq = MiscTab:AddTextbox({
+local freq = GeneralTab:AddTextbox({
 	Name = "Autoclick Interval",
 	Default = "0.01", 
 	TextDisappear = false, 
@@ -249,7 +249,7 @@ local freq = MiscTab:AddTextbox({
 })
 
 
-MiscTab:AddToggle({
+GeneralTab:AddToggle({
     Name = "Auto Click",
     Default = false,
     Callback = function(Value)
