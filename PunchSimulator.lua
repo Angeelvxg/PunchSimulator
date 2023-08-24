@@ -264,6 +264,14 @@ GeneralTab:AddToggle({
     end
 })
 
+GeneralTab:AddButton({
+    Name = "Rejoin",
+    Callback = function()
+		game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+    end    
+})
+
+
 local plrs = game:GetService("Players")
 
 local UI = game:GetObjects("rbxassetid://7437010836")[1]
