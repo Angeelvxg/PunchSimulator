@@ -59,12 +59,12 @@ local MainTab = Window:MakeTab({
 })
 
 local EggTab = Window:MakeTab({
-  Name = "Egg",
+  Name = "Eggs",
   Icon = "rbxassetid://4483345998" 
 })
 
 local GeneralTab = Window:MakeTab({
-  Name = "Teleport",
+  Name = "Misc",
   Icon = "rbxassetid://4483345998"
 })
 
