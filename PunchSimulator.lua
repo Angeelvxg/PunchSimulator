@@ -7,7 +7,7 @@ local VirtualInputManager = game:GetService("VirtualInputManager")
 -- Player
 local LocalPlayer = Players.LocalPlayer
 
-local parts = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+local parts = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
 
 -- Reusable functions
 local function autoClick(enabled, interval)
@@ -189,7 +189,6 @@ EggTab:AddToggle({
   end
 })
 
-
 EggTab:AddToggle({
   Name = "Auto Break Space Egg",
   Default = false,
@@ -198,6 +197,20 @@ EggTab:AddToggle({
     while autoBreakEgg and task.wait() do
       local args = {
         [1] = "10"  
+      }
+      game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+    end
+  end
+})
+
+EggTab:AddToggle({
+  Name = "Auto Break Magic Egg",
+  Default = false,
+  Callback = function(Value)
+    autoBreakEgg = Value
+    while autoBreakEgg and task.wait() do
+      local args = {
+        [1] = "11"  
       }
       game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
     end
